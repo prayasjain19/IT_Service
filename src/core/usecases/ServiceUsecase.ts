@@ -1,4 +1,4 @@
-import { ServiceDTO } from "../dtos/Service.dto";
+import { CreateServiceDTO, ServiceDTO, UpdateServiceDTO } from "../dtos/Service.dto";
 import { Service } from "../entities/Service.entity";
 import { IServiceRepository } from "../repositories/ServiceRepository";
 
@@ -11,18 +11,11 @@ export class ServiceUseCase {
     async getById(id: number): Promise<Service | null> {
         return this.repository.findById(id);
     }
-    async create(data: Omit<ServiceDTO, "id">): Promise<Service> {
-        if (!data.title || data.title.trim() === "") {
-            throw new Error("Service title is required.");
-        }
-        if (data.description && data.description.length < 10) {
-            throw new Error("Service description must be at least 10 characters long.");
-        }
-        // Potentially more complex validation here
-        return this.repository.create(data);
-    }
+    async create(data: CreateServiceDTO): Promise<Service> {
+    return await this.repository.create(data);
+  }
 
-    async update(id: number, data: Partial<ServiceDTO>): Promise<Service> {
+    async update(id: number, data: UpdateServiceDTO): Promise<Service> {
         const existingService = await this.repository.findById(id);
         if (!existingService) {
             throw new Error(`Service with ID ${id} not found.`);
@@ -34,6 +27,10 @@ export class ServiceUseCase {
     }
 
     async delete(id: number): Promise<void> {
-        return this.repository.delete(id);
+        const existing = await this.repository.findById(id);
+    if (!existing) {
+      throw new Error(`Service with ID ${id} not found.`);
+    }
+    return await this.repository.delete(id);
     }
 }

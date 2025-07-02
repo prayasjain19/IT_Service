@@ -1,11 +1,10 @@
 // app/api/services/[id]/route.ts
 import { NextResponse } from 'next/server';
 import { ServiceUseCase } from '@/core/usecases/ServiceUsecase';
-import { ServiceDTO } from '@/core/dtos/Service.dto';
+import {UpdateServiceDTO } from '@/core/dtos/Service.dto';
 import { PrismaServiceRepository } from '@/core/repositories/ServiceRepository';
 
-
-const serviceUsecase = new ServiceUseCase(new PrismaServiceRepository());
+const serviceUsecase = new ServiceUseCase(new PrismaServiceRepository);
 
 interface Params {
   id: string;
@@ -34,7 +33,7 @@ export async function PUT(req: Request, { params }: { params: Params }) {
     if (isNaN(id)) {
       return NextResponse.json({ error: 'Invalid service ID' }, { status: 400 });
     }
-    const data: ServiceDTO = await req.json();
+    const data: UpdateServiceDTO = await req.json();
     const updatedService = await serviceUsecase.update(id, data);
     return NextResponse.json(updatedService, { status: 200 });
   } catch (error: any) {

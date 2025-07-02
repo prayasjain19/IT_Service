@@ -1,10 +1,11 @@
 // app/api/services/route.ts
 import { NextResponse } from 'next/server';
 import { ServiceUseCase } from '@/core/usecases/ServiceUsecase';
-import { ServiceDTO } from '@/core/dtos/Service.dto';
+import { CreateServiceDTO } from '@/core/dtos/Service.dto';
 import { PrismaServiceRepository } from '@/core/repositories/ServiceRepository';
+import { ServiceApiRepository } from '@/infrastructure/fronetend/repositories/Service.api';
 
-const serviceUsecase = new ServiceUseCase(new PrismaServiceRepository());
+const serviceUsecase = new ServiceUseCase(new ServiceApiRepository());
 
 export async function GET() {
     try {
@@ -18,7 +19,7 @@ export async function GET() {
 
 export async function POST(req: Request) {
     try {
-        const data: ServiceDTO = await req.json();
+        const data: CreateServiceDTO = await req.json();
         const newService = await serviceUsecase.create(data);
         return NextResponse.json(newService, { status: 201 });
     } catch (error: any) {
