@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/page";
-import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,8 +29,7 @@ export default function RootLayout({
       <body
         className="bg-gradient-to-br from-[#131B4D] to-[#1A1F3E] text-white font-sans scroll-smooth"
       >
-        <Toaster position="top-right" />
-        {/* <Header /> */}
+        <Header />
         {children}
       </body>
     </html>
