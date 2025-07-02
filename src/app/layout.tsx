@@ -31,7 +31,7 @@ export default function RootLayout({
         className="bg-gradient-to-br from-[#131B4D] to-[#1A1F3E] text-white font-sans scroll-smooth"
       >
         <Toaster position="top-right" />
-        <Header />
+        {/* <Header /> */}
         {children}
       </body>
     </html>
