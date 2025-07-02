@@ -1,5 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
+import Image from "next/image";
+import boy from "../../../public/assests/boy.png";
 
 export default function AboutSection() {
     return (
@@ -18,10 +20,12 @@ export default function AboutSection() {
                     development, and strategy, we help startups and enterprises grow faster.
                 </p>
                 <div className="grid md:grid-cols-2 gap-8 items-center mt-10">
-                    <img
-                        src="/boy.png"
-                        alt="Team"
-                        className="w-full rounded-2xl shadow-lg border border-blue-400"
+                    <Image
+                        src={boy}
+                        alt="About Team"
+                        width={500}
+                        height={500}
+                        className="rounded-2xl shadow-lg border border-purple-400"
                     />
                     <div className="text-left">
                         <h3 className="text-2xl font-semibold text-white mb-2">Why Choose Us?</h3>
