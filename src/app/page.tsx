@@ -1,7 +1,10 @@
-import Image from "next/image";
+import AboutSection from "@/components/Homepage/About";
+
 
 export default function Home() {
   return (
-    <div></div>
+    <main>
+      <AboutSection />
+    </main>
   );
 }
