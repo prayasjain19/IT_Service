@@ -49,7 +49,7 @@ export default function ServiceGrid({ services }: Props) {
               </div>
             )}
             <h3 className="
-              text-2xl font-bold text-white
+              text-2xl font-bold text-purple-400
               mb-3 tracking-wide
               group-hover:text-purple-300 transition-colors duration-300 
             ">

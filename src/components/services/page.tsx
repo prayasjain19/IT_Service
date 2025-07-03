@@ -28,7 +28,7 @@ export default function ServicesPage() {
   }, []);
 
   return (
-    <section className="min-h-screen py-24 px-6 md:px-16 bg-[#0f1117] text-white">
+    <section id="services" className="min-h-screen py-24 px-6 md:px-16 bg-[#0f1117] text-white">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
           Our <span className="text-purple-400">Services</span>

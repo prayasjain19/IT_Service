@@ -25,19 +25,27 @@ export default function HomeSection() {
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link
-            href="#services"
+
+          <button
+            onClick={() => {
+              const section = document.getElementById("services");
+              if (section) section.scrollIntoView({ behavior: "smooth" });
+            }}
             className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-xl text-lg font-medium transition duration-300"
           >
             Explore Services
-          </Link>
-          <Link
-            href="#about"
+          </button>
+          <button
+            onClick={() => {
+              const section = document.getElementById("about");
+              if (section) section.scrollIntoView({ behavior: "smooth" });
+            }}
             className="border border-purple-600 text-purple-400 hover:bg-purple-600 hover:text-white px-6 py-3 rounded-xl text-lg font-medium transition duration-300"
           >
             Learn More
-          </Link>
+          </button>
         </div>
+
       </motion.div>
     </section>
   );
