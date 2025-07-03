@@ -1,4 +1,5 @@
 
+import ContactPage from "@/components/Contact/Contact";
 import AboutSection from "@/components/Homepage/About";
 import HomeSection from "@/components/Homepage/Hero";
 import ServicesPage from "@/components/services/page";
@@ -12,6 +13,7 @@ export default function Home() {
       <HomeSection />
       <AboutSection />
       <ServicesPage />
+      <ContactPage />
     </main>
   );
 }
