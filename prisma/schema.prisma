@@ -24,8 +24,8 @@ model NavbarLink {
 
 model Service {
   id          Int      @id @default(autoincrement())
-  title       String
-  description String
+  title       String   @unique
+  description String   @db.Text
   iconUrl     String? // Optional image/icon
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt

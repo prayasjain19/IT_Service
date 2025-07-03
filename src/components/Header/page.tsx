@@ -43,14 +43,16 @@ export default function Header() {
     <nav className="bg-[#1A1F3E] text-white px-6 py-4 shadow-lg sticky top-0 z-50 backdrop-blur-md bg-opacity-80">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Animate IT Services heading */}
-        <motion.h1
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-xl font-bold"
-        >
-          🚀 IT Services
-        </motion.h1>
+        <Link href="/" passHref>
+          <motion.h1
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-xl font-bold cursor-pointer hover:text-purple-400 transition-colors duration-300"
+          >
+            🚀 IT Services
+          </motion.h1>
+        </Link>
 
         <div className="flex gap-6">
           {links.map((link) => (
@@ -58,9 +60,8 @@ export default function Header() {
               key={link.id}
               href={link.href}
               whileHover={{ scale: 1.05 }}
-              className={`transition-colors ${
-                active === link.href ? 'text-purple-400 font-semibold' : 'text-white'
-              }`}
+              className={`transition-colors ${active === link.href ? 'text-purple-400 font-semibold' : 'text-white'
+                }`}
             >
               {link.title}
             </motion.a>

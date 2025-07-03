@@ -4,7 +4,7 @@ import { ServiceUseCase } from '@/core/usecases/ServiceUsecase';
 import {UpdateServiceDTO } from '@/core/dtos/Service.dto';
 import { PrismaServiceRepository } from '@/core/repositories/ServiceRepository';
 
-const serviceUsecase = new ServiceUseCase(new PrismaServiceRepository);
+const serviceUsecase = new ServiceUseCase(new PrismaServiceRepository());
 
 interface Params {
   id: string;

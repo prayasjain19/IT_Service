@@ -55,7 +55,7 @@ export class ServiceApiRepository implements IServiceRepository {
 
     async create(data:CreateServiceDTO): Promise<Service> {
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/services`, {
+            const response = await fetch(`/api/services`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

@@ -33,7 +33,7 @@ const AddServicePage = () => {
         try {
             await repo.create(form);
             toast.success('Service added successfully!');
-            router.push('/sxs_admin/service');
+            router.push('/sxs_admin/services');
         } catch (err: unknown) {
             const msg = err instanceof Error ? err.message : 'Unexpected error';
             toast.error(`Error: ${msg}`);

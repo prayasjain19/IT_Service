@@ -3,9 +3,8 @@ import { NextResponse } from 'next/server';
 import { ServiceUseCase } from '@/core/usecases/ServiceUsecase';
 import { CreateServiceDTO } from '@/core/dtos/Service.dto';
 import { PrismaServiceRepository } from '@/core/repositories/ServiceRepository';
-import { ServiceApiRepository } from '@/infrastructure/fronetend/repositories/Service.api';
 
-const serviceUsecase = new ServiceUseCase(new ServiceApiRepository());
+const serviceUsecase = new ServiceUseCase(new PrismaServiceRepository());
 
 export async function GET() {
     try {
