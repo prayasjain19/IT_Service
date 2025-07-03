@@ -78,12 +78,12 @@ export default function AdminServiceList() {
               </p>
 
               <div className="flex gap-3">
-                <button
+                {/* <button
                   onClick={() => handleEdit(service.id)}
                   className="bg-blue-600 hover:bg-blue-700 text-white text-sm px-4 py-1.5 rounded-xl transition"
                 >
                   Edit
-                </button>
+                </button> */}
                 <button
                   onClick={() => handleDelete(service.id)}
                   className="bg-red-600 hover:bg-red-700 text-white text-sm px-4 py-1.5 rounded-xl transition"

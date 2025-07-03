@@ -89,7 +89,7 @@ export default function ContactPage() {
                   <p className="text-gray-200">
                     NextGen IT Solutions<br />
                     123 Tech Street, 5th Floor<br />
-                    Bangalore, Karnataka, India - 560001
+                    Bangalor - 56000100
                   </p>
                 </div>
               </div>
@@ -115,7 +115,7 @@ export default function ContactPage() {
                 <div>
                   <h4 className="text-purple-300 text-xl font-semibold">Call Us</h4>
                   <p className="text-gray-200">
-                    <a href="tel:+919876543210" className="hover:text-purple-400 transition-colors">+91 98765 43210</a>
+                    <a href="tel:+919876543210" className="hover:text-purple-400 transition-colors">+91 9876 000</a>
                   </p>
                 </div>
               </div>
