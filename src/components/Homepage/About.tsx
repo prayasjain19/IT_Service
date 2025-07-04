@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import boy from "../../../public/assests/boy1.png"// ensure correct path
+import boy from "../../../public/assets/boy1.png"// ensure correct path
 
 export default function AboutSection() {
     return (

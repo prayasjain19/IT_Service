@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Navbar as NavbarEntity } from "@/core/entities/Navbar.entity";
 import { motion } from "framer-motion";
-
+import { Button } from "../ui/button";
 
 export default function Header() {
+  const MotionLink = motion(Link);
+  const MotionButton = motion(Button);
   const [links, setLinks] = useState<NavbarEntity[]>([]);
   const [active, setActive] = useState<string>("");
 
@@ -61,7 +63,7 @@ export default function Header() {
         {/* Center: Nav Links */}
         <div className="hidden md:flex gap-8 justify-center items-center">
           {links.map((link) => (
-            <motion.a
+            <MotionLink
               key={link.id}
               href={link.href}
               whileHover={{ scale: 1.05 }}
@@ -71,18 +73,18 @@ export default function Header() {
                 }`}
             >
               {link.title}
-            </motion.a>
+            </MotionLink>
           ))}
         </div>
 
         {/* Right: Get Quote Button */}
-        <motion.button
+        <MotionButton
           whileHover={{ scale: 1.05 }}
           onClick={onButtonClick}
           className="hidden md:block bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-lg font-medium transition duration-300"
         >
           Get a Quote
-        </motion.button>
+        </MotionButton>
       </div>
     </nav>
   );
