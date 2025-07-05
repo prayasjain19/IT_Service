@@ -11,6 +11,7 @@ export default function AdminLoginForm() {
     const [loading, setLoading] = useState(false);
     const router = useRouter();
 
+    //Handling Login 
     const handleLogin = async () => {
         setLoading(true);
         setError('');
@@ -40,9 +41,10 @@ export default function AdminLoginForm() {
     return (
         <div className="max-w-md mx-auto mt-24 p-6 rounded-2xl shadow-2xl bg-[#0F142A] border border-purple-800">
             <h2 className="text-2xl font-bold text-purple-400 mb-4">🔐 Admin Login</h2>
-
+        {/* Error Block */}
             {error && <p className="text-red-500 mb-3">{error}</p>}
 
+            {/* Email */}
             <input
                 type="email"
                 placeholder="Email"
@@ -50,7 +52,7 @@ export default function AdminLoginForm() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
             />
-
+            {/* Password */}
             <input
                 type="password"
                 placeholder="Password"
