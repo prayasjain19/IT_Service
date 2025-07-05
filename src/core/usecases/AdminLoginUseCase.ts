@@ -3,6 +3,7 @@ import { IAdminRepository } from "../repositories/AdminRepository";
 import { LoginDTO } from "../dtos/Admin.dto";
 import bcrypt from "bcryptjs"
 
+//Admin Login Use Cse to execute the admin Use Case
 export class AdminLoginUseCase {
   constructor(
     private adminRepo: IAdminRepository,
