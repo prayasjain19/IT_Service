@@ -11,6 +11,7 @@ export default function OtpVerifyForm() {
     const [loading, setLoading] = useState(false);
     const router = useRouter();
 
+    //Handling Verify 
     const handleVerify = async () => {
         setError('');
         setLoading(true);
@@ -45,7 +46,7 @@ export default function OtpVerifyForm() {
             <h2 className="text-2xl font-bold text-purple-400 mb-4">Verify OTP</h2>
 
             {error && <p className="text-red-500 mb-3">{error}</p>}
-
+            {/* Email */}
             <input
                 type="email"
                 placeholder="Email"
