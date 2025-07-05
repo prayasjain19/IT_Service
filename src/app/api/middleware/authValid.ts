@@ -1,10 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
 
-const JWT_SECRET = process.env.JWT_SECRET!;
 
 export function middleware(req: NextRequest) {
-  const token = req.cookies.get('admin-token')?.value;
+  const token = req.cookies.get('sxs_admin_token')?.value;
 
   // Protect only /sxs_admin routes
   if (req.nextUrl.pathname.startsWith('/sxs_admin')) {
