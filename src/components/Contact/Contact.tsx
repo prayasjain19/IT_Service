@@ -5,9 +5,6 @@ import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
 import { useState } from 'react';
 
-// You might want to install a popular icon library like 'react-icons' for better icons.
-// For example: `npm install react-icons` or `yarn add react-icons`
-// import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaClock } from 'react-icons/fa'; // Example
 
 type FormValues = {
   name: string;
@@ -64,7 +61,7 @@ export default function ContactPage() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          {/* Contact Info - ENHANCED LEFT SIDE */}
+          {/* Contact Info  */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}

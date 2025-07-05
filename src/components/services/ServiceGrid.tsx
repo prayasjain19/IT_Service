@@ -9,7 +9,9 @@ interface Props {
 
 export default function ServiceGrid({ services }: Props) {
   return (
+
     <section className="py-20 px-6 sm:px-10 lg:px-16 max-w-7xl mx-auto">
+      {/* Service Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {services.map((service, index) => (
           <motion.div

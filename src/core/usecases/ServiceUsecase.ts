@@ -12,8 +12,8 @@ export class ServiceUseCase {
         return this.repository.findById(id);
     }
     async create(data: CreateServiceDTO): Promise<Service> {
-    return await this.repository.create(data);
-  }
+        return await this.repository.create(data);
+    }
 
     async update(id: number, data: UpdateServiceDTO): Promise<Service> {
         const existingService = await this.repository.findById(id);
@@ -28,9 +28,9 @@ export class ServiceUseCase {
 
     async delete(id: number): Promise<void> {
         const existing = await this.repository.findById(id);
-    if (!existing) {
-      throw new Error(`Service with ID ${id} not found.`);
-    }
-    return await this.repository.delete(id);
+        if (!existing) {
+            throw new Error(`Service with ID ${id} not found.`);
+        }
+        return await this.repository.delete(id);
     }
 }

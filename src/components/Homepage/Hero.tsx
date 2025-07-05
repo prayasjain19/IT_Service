@@ -44,7 +44,7 @@ export default function HomeSection() {
         <p className="text-gray-300 text-base sm:text-lg mt-6 max-w-xl text-left">
           Build smarter applications, automate workflows, and innovate faster with our enterprise-grade IT services.
         </p>
-
+      {/* Explore Service Button*/}
         <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
           <Button
             onClick={() => onScrollTo("services")}
@@ -53,6 +53,7 @@ export default function HomeSection() {
             Explore Services
           </Button>
 
+          {/* Learn More Button */}
           <Button
             onClick={() => onScrollTo("about")}
             className="border border-purple-500 text-purple-300 hover:bg-purple-600 hover:text-white px-8 py-6 rounded-xl text-base sm:text-lg font-medium transition duration-300"

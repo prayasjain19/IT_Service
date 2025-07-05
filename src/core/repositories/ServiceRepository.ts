@@ -1,7 +1,6 @@
 import { Service } from "../entities/Service.entity";
 import { CreateServiceDTO, ServiceDTO, UpdateServiceDTO } from "../dtos/Service.dto";
 import { db } from "@/lib/prisma";
-import { Prisma } from "@prisma/client";
 
 export interface IServiceRepository {
     findAll(): Promise<Service[]>;

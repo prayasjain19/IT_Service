@@ -41,11 +41,12 @@ model Blog {
   updatedAt  DateTime @updatedAt
 }
 
-model TechStack {
-  id          Int      @id @default(autoincrement())
-  name        String
-  logoUrl     String?
-  description String?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+model Admin {
+  id              Int       @id @default(autoincrement())
+  email           String    @unique
+  passwordHash    String
+  otp             String?   // Store OTP temporarily
+  otpExpiry       DateTime? // OTP expiry timestamp
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
 }
