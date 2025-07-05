@@ -1,5 +1,6 @@
 import nodemailer from "nodemailer"
 
+//OTP Service to Generate and Send Email
 export class OtpService {
     generateOtp() {
         const code = Math.floor(100000 + Math.random() * 900000).toString();
