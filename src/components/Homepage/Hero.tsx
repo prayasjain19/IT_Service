@@ -10,7 +10,7 @@ export default function HomeSection() {
     const section = document.getElementById(id);
     if (section) section.scrollIntoView({ behavior: "smooth" });
   };
-
+  //Hero Section
   return (
     <section
       id="home"
