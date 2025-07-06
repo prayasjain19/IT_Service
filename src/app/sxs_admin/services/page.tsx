@@ -12,6 +12,7 @@ export default function AdminServiceList() {
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
 
+  //Fetching Services
   useEffect(() => {
     const fetchServices = async () => {
       try {
@@ -28,7 +29,7 @@ export default function AdminServiceList() {
 
     fetchServices();
   }, []);
-
+  //To Delete Service
   const handleDelete = async (id: number) => {
     try {
       const repo = new ServiceApiRepository();
@@ -40,7 +41,7 @@ export default function AdminServiceList() {
       toast.error('Failed to delete service');
     }
   };
-
+  //Pending
   const handleEdit = (id: number) => {
     router.push(`/sxs_admin/services/edit/${id}`);
   };

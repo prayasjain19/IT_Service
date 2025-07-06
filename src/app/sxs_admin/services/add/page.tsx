@@ -8,7 +8,7 @@ import toast from 'react-hot-toast';
 import { motion } from 'framer-motion';
 
 const repo = new ServiceApiRepository();
-
+//To Add Service
 const AddServicePage = () => {
     const router = useRouter();
 
@@ -41,7 +41,7 @@ const AddServicePage = () => {
             setLoading(false);
         }
     };
-
+    //Form To Add Service
     return (
         <section className="py-16 px-6 md:px-20 text-white min-h-screen bg-gradient-to-br from-[#131B4D] to-[#1A1F3E]">
             <motion.div
